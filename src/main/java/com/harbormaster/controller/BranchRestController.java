@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class BranchRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Branch business objects
-     * @return		Set<Branch>
+     * @return		List<Branch>
      */
     @GetMapping("/")
     public List<Branch> loadAll() {                
@@ -156,6 +156,16 @@ public class BranchRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<Branch>
+
+    @GetMapping("/Bank")
+    public List<Branch> Bank(UUID parentId) {
+		List<Branch> branchList = load(parentId).getBank;
+		return branchList;
+	}
+	 */
     /**
      * save Bank on Branch
      * @param		command AssignBankToBranchCommand
@@ -176,6 +186,16 @@ public class BranchRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getBranchId()  );
 	}
 	
+
+	/**
+	 * Handles loading all Accounts} business objects
+	 * @return		List<Branch>
+
+    @GetMapping("/Accounts")
+    public List<Branch> Accounts(UUID parentId) {
+		List<Branch> branchList = load(parentId).getAccounts;
+		return branchList;
+	}
 
     /**
      * save Accounts on Branch
@@ -198,6 +218,16 @@ public class BranchRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Accounts with Id " + command.getBranchId()  );
 	}
 
+	/**
+	 * Handles loading all LoanAccounts} business objects
+	 * @return		List<Branch>
+
+    @GetMapping("/LoanAccounts")
+    public List<Branch> LoanAccounts(UUID parentId) {
+		List<Branch> branchList = load(parentId).getLoanAccounts;
+		return branchList;
+	}
+
     /**
      * save LoanAccounts on Branch
      * @param		command AssignLoanAccountsToBranchCommand
@@ -217,6 +247,16 @@ public class BranchRestController extends BaseSpringRestController {
 	{		
 		service.removeFromLoanAccounts( command );
 		LOGGER.info( "Successfully removed LoanAccounts with Id " + command.getBranchId()  );
+	}
+
+	/**
+	 * Handles loading all Atms} business objects
+	 * @return		List<Branch>
+
+    @GetMapping("/Atms")
+    public List<Branch> Atms(UUID parentId) {
+		List<Branch> branchList = load(parentId).getAtms;
+		return branchList;
 	}
 
     /**

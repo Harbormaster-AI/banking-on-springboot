@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class BankRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Bank business objects
-     * @return		Set<Bank>
+     * @return		List<Bank>
      */
     @GetMapping("/")
     public List<Bank> loadAll() {                
@@ -156,6 +156,16 @@ public class BankRestController extends BaseSpringRestController {
                             
     }
 
+
+	/**
+	 * Handles loading all Branches} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/Branches")
+    public List<Bank> Branches(UUID parentId) {
+		List<Bank> bankList = load(parentId).getBranches;
+		return bankList;
+	}
 
     /**
      * save Branches on Bank
@@ -176,6 +186,16 @@ public class BankRestController extends BaseSpringRestController {
 	{		
 		service.removeFromBranches( command );
 		LOGGER.info( "Successfully removed Branches with Id " + command.getBankId()  );
+	}
+
+	/**
+	 * Handles loading all Products} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/Products")
+    public List<Bank> Products(UUID parentId) {
+		List<Bank> bankList = load(parentId).getProducts;
+		return bankList;
 	}
 
     /**
@@ -199,6 +219,16 @@ public class BankRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Products with Id " + command.getBankId()  );
 	}
 
+	/**
+	 * Handles loading all Customers} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/Customers")
+    public List<Bank> Customers(UUID parentId) {
+		List<Bank> bankList = load(parentId).getCustomers;
+		return bankList;
+	}
+
     /**
      * save Customers on Bank
      * @param		command AssignCustomersToBankCommand
@@ -218,6 +248,16 @@ public class BankRestController extends BaseSpringRestController {
 	{		
 		service.removeFromCustomers( command );
 		LOGGER.info( "Successfully removed Customers with Id " + command.getBankId()  );
+	}
+
+	/**
+	 * Handles loading all Accounts} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/Accounts")
+    public List<Bank> Accounts(UUID parentId) {
+		List<Bank> bankList = load(parentId).getAccounts;
+		return bankList;
 	}
 
     /**
@@ -241,6 +281,16 @@ public class BankRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Accounts with Id " + command.getBankId()  );
 	}
 
+	/**
+	 * Handles loading all PaymentCards} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/PaymentCards")
+    public List<Bank> PaymentCards(UUID parentId) {
+		List<Bank> bankList = load(parentId).getPaymentCards;
+		return bankList;
+	}
+
     /**
      * save PaymentCards on Bank
      * @param		command AssignPaymentCardsToBankCommand
@@ -260,6 +310,16 @@ public class BankRestController extends BaseSpringRestController {
 	{		
 		service.removeFromPaymentCards( command );
 		LOGGER.info( "Successfully removed PaymentCards with Id " + command.getBankId()  );
+	}
+
+	/**
+	 * Handles loading all LoanAccounts} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/LoanAccounts")
+    public List<Bank> LoanAccounts(UUID parentId) {
+		List<Bank> bankList = load(parentId).getLoanAccounts;
+		return bankList;
 	}
 
     /**
@@ -283,6 +343,16 @@ public class BankRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed LoanAccounts with Id " + command.getBankId()  );
 	}
 
+	/**
+	 * Handles loading all ExchangeRates} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/ExchangeRates")
+    public List<Bank> ExchangeRates(UUID parentId) {
+		List<Bank> bankList = load(parentId).getExchangeRates;
+		return bankList;
+	}
+
     /**
      * save ExchangeRates on Bank
      * @param		command AssignExchangeRatesToBankCommand
@@ -304,6 +374,16 @@ public class BankRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed ExchangeRates with Id " + command.getBankId()  );
 	}
 
+	/**
+	 * Handles loading all Consents} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/Consents")
+    public List<Bank> Consents(UUID parentId) {
+		List<Bank> bankList = load(parentId).getConsents;
+		return bankList;
+	}
+
     /**
      * save Consents on Bank
      * @param		command AssignConsentsToBankCommand
@@ -323,6 +403,16 @@ public class BankRestController extends BaseSpringRestController {
 	{		
 		service.removeFromConsents( command );
 		LOGGER.info( "Successfully removed Consents with Id " + command.getBankId()  );
+	}
+
+	/**
+	 * Handles loading all ThirdPartyProviders} business objects
+	 * @return		List<Bank>
+
+    @GetMapping("/ThirdPartyProviders")
+    public List<Bank> ThirdPartyProviders(UUID parentId) {
+		List<Bank> bankList = load(parentId).getThirdPartyProviders;
+		return bankList;
 	}
 
     /**

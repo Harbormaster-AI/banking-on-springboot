@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class ThirdPartyProviderRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all ThirdPartyProvider business objects
-     * @return		Set<ThirdPartyProvider>
+     * @return		List<ThirdPartyProvider>
      */
     @GetMapping("/")
     public List<ThirdPartyProvider> loadAll() {                
@@ -156,6 +156,16 @@ public class ThirdPartyProviderRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<ThirdPartyProvider>
+
+    @GetMapping("/Bank")
+    public List<ThirdPartyProvider> Bank(UUID parentId) {
+		List<ThirdPartyProvider> thirdPartyProviderList = load(parentId).getBank;
+		return thirdPartyProviderList;
+	}
+	 */
     /**
      * save Bank on ThirdPartyProvider
      * @param		command AssignBankToThirdPartyProviderCommand
@@ -176,6 +186,16 @@ public class ThirdPartyProviderRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getThirdPartyProviderId()  );
 	}
 	
+
+	/**
+	 * Handles loading all Consents} business objects
+	 * @return		List<ThirdPartyProvider>
+
+    @GetMapping("/Consents")
+    public List<ThirdPartyProvider> Consents(UUID parentId) {
+		List<ThirdPartyProvider> thirdPartyProviderList = load(parentId).getConsents;
+		return thirdPartyProviderList;
+	}
 
     /**
      * save Consents on ThirdPartyProvider

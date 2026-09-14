@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class BankingProductRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all BankingProduct business objects
-     * @return		Set<BankingProduct>
+     * @return		List<BankingProduct>
      */
     @GetMapping("/")
     public List<BankingProduct> loadAll() {                
@@ -156,6 +156,16 @@ public class BankingProductRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<BankingProduct>
+
+    @GetMapping("/Bank")
+    public List<BankingProduct> Bank(UUID parentId) {
+		List<BankingProduct> bankingProductList = load(parentId).getBank;
+		return bankingProductList;
+	}
+	 */
     /**
      * save Bank on BankingProduct
      * @param		command AssignBankToBankingProductCommand
@@ -176,6 +186,16 @@ public class BankingProductRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getBankingProductId()  );
 	}
 	
+
+	/**
+	 * Handles loading all Accounts} business objects
+	 * @return		List<BankingProduct>
+
+    @GetMapping("/Accounts")
+    public List<BankingProduct> Accounts(UUID parentId) {
+		List<BankingProduct> bankingProductList = load(parentId).getAccounts;
+		return bankingProductList;
+	}
 
     /**
      * save Accounts on BankingProduct
@@ -198,6 +218,16 @@ public class BankingProductRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Accounts with Id " + command.getBankingProductId()  );
 	}
 
+	/**
+	 * Handles loading all LoanAccounts} business objects
+	 * @return		List<BankingProduct>
+
+    @GetMapping("/LoanAccounts")
+    public List<BankingProduct> LoanAccounts(UUID parentId) {
+		List<BankingProduct> bankingProductList = load(parentId).getLoanAccounts;
+		return bankingProductList;
+	}
+
     /**
      * save LoanAccounts on BankingProduct
      * @param		command AssignLoanAccountsToBankingProductCommand
@@ -217,6 +247,16 @@ public class BankingProductRestController extends BaseSpringRestController {
 	{		
 		service.removeFromLoanAccounts( command );
 		LOGGER.info( "Successfully removed LoanAccounts with Id " + command.getBankingProductId()  );
+	}
+
+	/**
+	 * Handles loading all PaymentCards} business objects
+	 * @return		List<BankingProduct>
+
+    @GetMapping("/PaymentCards")
+    public List<BankingProduct> PaymentCards(UUID parentId) {
+		List<BankingProduct> bankingProductList = load(parentId).getPaymentCards;
+		return bankingProductList;
 	}
 
     /**

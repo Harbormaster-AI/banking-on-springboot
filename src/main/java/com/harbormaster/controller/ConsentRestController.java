@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class ConsentRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Consent business objects
-     * @return		Set<Consent>
+     * @return		List<Consent>
      */
     @GetMapping("/")
     public List<Consent> loadAll() {                
@@ -156,6 +156,16 @@ public class ConsentRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Customer} business objects
+	 * @return		List<Consent>
+
+    @GetMapping("/Customer")
+    public List<Consent> Customer(UUID parentId) {
+		List<Consent> consentList = load(parentId).getCustomer;
+		return consentList;
+	}
+	 */
     /**
      * save Customer on Consent
      * @param		command AssignCustomerToConsentCommand
@@ -176,6 +186,16 @@ public class ConsentRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Customer with Id " + command.getConsentId()  );
 	}
 	
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<Consent>
+
+    @GetMapping("/Bank")
+    public List<Consent> Bank(UUID parentId) {
+		List<Consent> consentList = load(parentId).getBank;
+		return consentList;
+	}
+	 */
     /**
      * save Bank on Consent
      * @param		command AssignBankToConsentCommand
@@ -196,6 +216,16 @@ public class ConsentRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getConsentId()  );
 	}
 	
+	/**
+	 * Handles loading all ThirdPartyProvider} business objects
+	 * @return		List<Consent>
+
+    @GetMapping("/ThirdPartyProvider")
+    public List<Consent> ThirdPartyProvider(UUID parentId) {
+		List<Consent> consentList = load(parentId).getThirdPartyProvider;
+		return consentList;
+	}
+	 */
     /**
      * save ThirdPartyProvider on Consent
      * @param		command AssignThirdPartyProviderToConsentCommand
@@ -216,6 +246,16 @@ public class ConsentRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned ThirdPartyProvider with Id " + command.getConsentId()  );
 	}
 	
+
+	/**
+	 * Handles loading all AuthorizedAccounts} business objects
+	 * @return		List<Consent>
+
+    @GetMapping("/AuthorizedAccounts")
+    public List<Consent> AuthorizedAccounts(UUID parentId) {
+		List<Consent> consentList = load(parentId).getAuthorizedAccounts;
+		return consentList;
+	}
 
     /**
      * save AuthorizedAccounts on Consent

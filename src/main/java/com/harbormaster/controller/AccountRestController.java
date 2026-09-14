@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class AccountRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Account business objects
-     * @return		Set<Account>
+     * @return		List<Account>
      */
     @GetMapping("/")
     public List<Account> loadAll() {                
@@ -156,6 +156,16 @@ public class AccountRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/Bank")
+    public List<Account> Bank(UUID parentId) {
+		List<Account> accountList = load(parentId).getBank;
+		return accountList;
+	}
+	 */
     /**
      * save Bank on Account
      * @param		command AssignBankToAccountCommand
@@ -176,6 +186,16 @@ public class AccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getAccountId()  );
 	}
 	
+	/**
+	 * Handles loading all Branch} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/Branch")
+    public List<Account> Branch(UUID parentId) {
+		List<Account> accountList = load(parentId).getBranch;
+		return accountList;
+	}
+	 */
     /**
      * save Branch on Account
      * @param		command AssignBranchToAccountCommand
@@ -196,6 +216,16 @@ public class AccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Branch with Id " + command.getAccountId()  );
 	}
 	
+	/**
+	 * Handles loading all Product} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/Product")
+    public List<Account> Product(UUID parentId) {
+		List<Account> accountList = load(parentId).getProduct;
+		return accountList;
+	}
+	 */
     /**
      * save Product on Account
      * @param		command AssignProductToAccountCommand
@@ -217,6 +247,16 @@ public class AccountRestController extends BaseSpringRestController {
 	}
 	
 
+	/**
+	 * Handles loading all Owners} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/Owners")
+    public List<Account> Owners(UUID parentId) {
+		List<Account> accountList = load(parentId).getOwners;
+		return accountList;
+	}
+
     /**
      * save Owners on Account
      * @param		command AssignOwnersToAccountCommand
@@ -236,6 +276,16 @@ public class AccountRestController extends BaseSpringRestController {
 	{		
 		service.removeFromOwners( command );
 		LOGGER.info( "Successfully removed Owners with Id " + command.getAccountId()  );
+	}
+
+	/**
+	 * Handles loading all Transactions} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/Transactions")
+    public List<Account> Transactions(UUID parentId) {
+		List<Account> accountList = load(parentId).getTransactions;
+		return accountList;
 	}
 
     /**
@@ -259,6 +309,16 @@ public class AccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Transactions with Id " + command.getAccountId()  );
 	}
 
+	/**
+	 * Handles loading all Statements} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/Statements")
+    public List<Account> Statements(UUID parentId) {
+		List<Account> accountList = load(parentId).getStatements;
+		return accountList;
+	}
+
     /**
      * save Statements on Account
      * @param		command AssignStatementsToAccountCommand
@@ -280,6 +340,16 @@ public class AccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Statements with Id " + command.getAccountId()  );
 	}
 
+	/**
+	 * Handles loading all StandingInstructions} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/StandingInstructions")
+    public List<Account> StandingInstructions(UUID parentId) {
+		List<Account> accountList = load(parentId).getStandingInstructions;
+		return accountList;
+	}
+
     /**
      * save StandingInstructions on Account
      * @param		command AssignStandingInstructionsToAccountCommand
@@ -299,6 +369,16 @@ public class AccountRestController extends BaseSpringRestController {
 	{		
 		service.removeFromStandingInstructions( command );
 		LOGGER.info( "Successfully removed StandingInstructions with Id " + command.getAccountId()  );
+	}
+
+	/**
+	 * Handles loading all FeeCharges} business objects
+	 * @return		List<Account>
+
+    @GetMapping("/FeeCharges")
+    public List<Account> FeeCharges(UUID parentId) {
+		List<Account> accountList = load(parentId).getFeeCharges;
+		return accountList;
 	}
 
     /**

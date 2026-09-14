@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class DisputeRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Dispute business objects
-     * @return		Set<Dispute>
+     * @return		List<Dispute>
      */
     @GetMapping("/")
     public List<Dispute> loadAll() {                
@@ -156,6 +156,16 @@ public class DisputeRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Transaction} business objects
+	 * @return		List<Dispute>
+
+    @GetMapping("/Transaction")
+    public List<Dispute> Transaction(UUID parentId) {
+		List<Dispute> disputeList = load(parentId).getTransaction;
+		return disputeList;
+	}
+	 */
     /**
      * save Transaction on Dispute
      * @param		command AssignTransactionToDisputeCommand
@@ -176,6 +186,16 @@ public class DisputeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Transaction with Id " + command.getDisputeId()  );
 	}
 	
+	/**
+	 * Handles loading all Customer} business objects
+	 * @return		List<Dispute>
+
+    @GetMapping("/Customer")
+    public List<Dispute> Customer(UUID parentId) {
+		List<Dispute> disputeList = load(parentId).getCustomer;
+		return disputeList;
+	}
+	 */
     /**
      * save Customer on Dispute
      * @param		command AssignCustomerToDisputeCommand
@@ -196,6 +216,16 @@ public class DisputeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Customer with Id " + command.getDisputeId()  );
 	}
 	
+	/**
+	 * Handles loading all Account} business objects
+	 * @return		List<Dispute>
+
+    @GetMapping("/Account")
+    public List<Dispute> Account(UUID parentId) {
+		List<Dispute> disputeList = load(parentId).getAccount;
+		return disputeList;
+	}
+	 */
     /**
      * save Account on Dispute
      * @param		command AssignAccountToDisputeCommand
@@ -216,6 +246,16 @@ public class DisputeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Account with Id " + command.getDisputeId()  );
 	}
 	
+	/**
+	 * Handles loading all PaymentCard} business objects
+	 * @return		List<Dispute>
+
+    @GetMapping("/PaymentCard")
+    public List<Dispute> PaymentCard(UUID parentId) {
+		List<Dispute> disputeList = load(parentId).getPaymentCard;
+		return disputeList;
+	}
+	 */
     /**
      * save PaymentCard on Dispute
      * @param		command AssignPaymentCardToDisputeCommand

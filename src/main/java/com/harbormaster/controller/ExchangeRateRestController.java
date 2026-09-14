@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class ExchangeRateRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all ExchangeRate business objects
-     * @return		Set<ExchangeRate>
+     * @return		List<ExchangeRate>
      */
     @GetMapping("/")
     public List<ExchangeRate> loadAll() {                
@@ -156,6 +156,16 @@ public class ExchangeRateRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<ExchangeRate>
+
+    @GetMapping("/Bank")
+    public List<ExchangeRate> Bank(UUID parentId) {
+		List<ExchangeRate> exchangeRateList = load(parentId).getBank;
+		return exchangeRateList;
+	}
+	 */
     /**
      * save Bank on ExchangeRate
      * @param		command AssignBankToExchangeRateCommand
@@ -176,6 +186,16 @@ public class ExchangeRateRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getExchangeRateId()  );
 	}
 	
+
+	/**
+	 * Handles loading all FxTrades} business objects
+	 * @return		List<ExchangeRate>
+
+    @GetMapping("/FxTrades")
+    public List<ExchangeRate> FxTrades(UUID parentId) {
+		List<ExchangeRate> exchangeRateList = load(parentId).getFxTrades;
+		return exchangeRateList;
+	}
 
     /**
      * save FxTrades on ExchangeRate

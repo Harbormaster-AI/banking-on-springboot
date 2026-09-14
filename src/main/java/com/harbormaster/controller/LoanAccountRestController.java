@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class LoanAccountRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all LoanAccount business objects
-     * @return		Set<LoanAccount>
+     * @return		List<LoanAccount>
      */
     @GetMapping("/")
     public List<LoanAccount> loadAll() {                
@@ -156,6 +156,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/Bank")
+    public List<LoanAccount> Bank(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getBank;
+		return loanAccountList;
+	}
+	 */
     /**
      * save Bank on LoanAccount
      * @param		command AssignBankToLoanAccountCommand
@@ -176,6 +186,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getLoanAccountId()  );
 	}
 	
+	/**
+	 * Handles loading all Branch} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/Branch")
+    public List<LoanAccount> Branch(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getBranch;
+		return loanAccountList;
+	}
+	 */
     /**
      * save Branch on LoanAccount
      * @param		command AssignBranchToLoanAccountCommand
@@ -196,6 +216,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Branch with Id " + command.getLoanAccountId()  );
 	}
 	
+	/**
+	 * Handles loading all Product} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/Product")
+    public List<LoanAccount> Product(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getProduct;
+		return loanAccountList;
+	}
+	 */
     /**
      * save Product on LoanAccount
      * @param		command AssignProductToLoanAccountCommand
@@ -217,6 +247,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
 	}
 	
 
+	/**
+	 * Handles loading all Borrowers} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/Borrowers")
+    public List<LoanAccount> Borrowers(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getBorrowers;
+		return loanAccountList;
+	}
+
     /**
      * save Borrowers on LoanAccount
      * @param		command AssignBorrowersToLoanAccountCommand
@@ -236,6 +276,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
 	{		
 		service.removeFromBorrowers( command );
 		LOGGER.info( "Successfully removed Borrowers with Id " + command.getLoanAccountId()  );
+	}
+
+	/**
+	 * Handles loading all RepaymentSchedule} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/RepaymentSchedule")
+    public List<LoanAccount> RepaymentSchedule(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getRepaymentSchedule;
+		return loanAccountList;
 	}
 
     /**
@@ -259,6 +309,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed RepaymentSchedule with Id " + command.getLoanAccountId()  );
 	}
 
+	/**
+	 * Handles loading all Payments} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/Payments")
+    public List<LoanAccount> Payments(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getPayments;
+		return loanAccountList;
+	}
+
     /**
      * save Payments on LoanAccount
      * @param		command AssignPaymentsToLoanAccountCommand
@@ -280,6 +340,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Payments with Id " + command.getLoanAccountId()  );
 	}
 
+	/**
+	 * Handles loading all Collateral} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/Collateral")
+    public List<LoanAccount> Collateral(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getCollateral;
+		return loanAccountList;
+	}
+
     /**
      * save Collateral on LoanAccount
      * @param		command AssignCollateralToLoanAccountCommand
@@ -299,6 +369,16 @@ public class LoanAccountRestController extends BaseSpringRestController {
 	{		
 		service.removeFromCollateral( command );
 		LOGGER.info( "Successfully removed Collateral with Id " + command.getLoanAccountId()  );
+	}
+
+	/**
+	 * Handles loading all FeeCharges} business objects
+	 * @return		List<LoanAccount>
+
+    @GetMapping("/FeeCharges")
+    public List<LoanAccount> FeeCharges(UUID parentId) {
+		List<LoanAccount> loanAccountList = load(parentId).getFeeCharges;
+		return loanAccountList;
 	}
 
     /**

@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class CustomerRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Customer business objects
-     * @return		Set<Customer>
+     * @return		List<Customer>
      */
     @GetMapping("/")
     public List<Customer> loadAll() {                
@@ -156,6 +156,16 @@ public class CustomerRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/Bank")
+    public List<Customer> Bank(UUID parentId) {
+		List<Customer> customerList = load(parentId).getBank;
+		return customerList;
+	}
+	 */
     /**
      * save Bank on Customer
      * @param		command AssignBankToCustomerCommand
@@ -177,6 +187,16 @@ public class CustomerRestController extends BaseSpringRestController {
 	}
 	
 
+	/**
+	 * Handles loading all Accounts} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/Accounts")
+    public List<Customer> Accounts(UUID parentId) {
+		List<Customer> customerList = load(parentId).getAccounts;
+		return customerList;
+	}
+
     /**
      * save Accounts on Customer
      * @param		command AssignAccountsToCustomerCommand
@@ -196,6 +216,16 @@ public class CustomerRestController extends BaseSpringRestController {
 	{		
 		service.removeFromAccounts( command );
 		LOGGER.info( "Successfully removed Accounts with Id " + command.getCustomerId()  );
+	}
+
+	/**
+	 * Handles loading all LoanAccounts} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/LoanAccounts")
+    public List<Customer> LoanAccounts(UUID parentId) {
+		List<Customer> customerList = load(parentId).getLoanAccounts;
+		return customerList;
 	}
 
     /**
@@ -219,6 +249,16 @@ public class CustomerRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed LoanAccounts with Id " + command.getCustomerId()  );
 	}
 
+	/**
+	 * Handles loading all PaymentCards} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/PaymentCards")
+    public List<Customer> PaymentCards(UUID parentId) {
+		List<Customer> customerList = load(parentId).getPaymentCards;
+		return customerList;
+	}
+
     /**
      * save PaymentCards on Customer
      * @param		command AssignPaymentCardsToCustomerCommand
@@ -238,6 +278,16 @@ public class CustomerRestController extends BaseSpringRestController {
 	{		
 		service.removeFromPaymentCards( command );
 		LOGGER.info( "Successfully removed PaymentCards with Id " + command.getCustomerId()  );
+	}
+
+	/**
+	 * Handles loading all ExternalAccounts} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/ExternalAccounts")
+    public List<Customer> ExternalAccounts(UUID parentId) {
+		List<Customer> customerList = load(parentId).getExternalAccounts;
+		return customerList;
 	}
 
     /**
@@ -261,6 +311,16 @@ public class CustomerRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed ExternalAccounts with Id " + command.getCustomerId()  );
 	}
 
+	/**
+	 * Handles loading all FundsTransfers} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/FundsTransfers")
+    public List<Customer> FundsTransfers(UUID parentId) {
+		List<Customer> customerList = load(parentId).getFundsTransfers;
+		return customerList;
+	}
+
     /**
      * save FundsTransfers on Customer
      * @param		command AssignFundsTransfersToCustomerCommand
@@ -280,6 +340,16 @@ public class CustomerRestController extends BaseSpringRestController {
 	{		
 		service.removeFromFundsTransfers( command );
 		LOGGER.info( "Successfully removed FundsTransfers with Id " + command.getCustomerId()  );
+	}
+
+	/**
+	 * Handles loading all Disputes} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/Disputes")
+    public List<Customer> Disputes(UUID parentId) {
+		List<Customer> customerList = load(parentId).getDisputes;
+		return customerList;
 	}
 
     /**
@@ -303,6 +373,16 @@ public class CustomerRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed Disputes with Id " + command.getCustomerId()  );
 	}
 
+	/**
+	 * Handles loading all KycProfiles} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/KycProfiles")
+    public List<Customer> KycProfiles(UUID parentId) {
+		List<Customer> customerList = load(parentId).getKycProfiles;
+		return customerList;
+	}
+
     /**
      * save KycProfiles on Customer
      * @param		command AssignKycProfilesToCustomerCommand
@@ -322,6 +402,16 @@ public class CustomerRestController extends BaseSpringRestController {
 	{		
 		service.removeFromKycProfiles( command );
 		LOGGER.info( "Successfully removed KycProfiles with Id " + command.getCustomerId()  );
+	}
+
+	/**
+	 * Handles loading all Consents} business objects
+	 * @return		List<Customer>
+
+    @GetMapping("/Consents")
+    public List<Customer> Consents(UUID parentId) {
+		List<Customer> customerList = load(parentId).getConsents;
+		return customerList;
 	}
 
     /**

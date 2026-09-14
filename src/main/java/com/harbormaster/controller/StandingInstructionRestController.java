@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class StandingInstructionRestController extends BaseSpringRestController 
 
     /**
      * Handles loading all StandingInstruction business objects
-     * @return		Set<StandingInstruction>
+     * @return		List<StandingInstruction>
      */
     @GetMapping("/")
     public List<StandingInstruction> loadAll() {                
@@ -156,6 +156,16 @@ public class StandingInstructionRestController extends BaseSpringRestController 
                             
     }
 
+	/**
+	 * Handles loading all Account} business objects
+	 * @return		List<StandingInstruction>
+
+    @GetMapping("/Account")
+    public List<StandingInstruction> Account(UUID parentId) {
+		List<StandingInstruction> standingInstructionList = load(parentId).getAccount;
+		return standingInstructionList;
+	}
+	 */
     /**
      * save Account on StandingInstruction
      * @param		command AssignAccountToStandingInstructionCommand
@@ -176,6 +186,16 @@ public class StandingInstructionRestController extends BaseSpringRestController 
 		LOGGER.info( "Successfully unassigned Account with Id " + command.getStandingInstructionId()  );
 	}
 	
+	/**
+	 * Handles loading all Beneficiary} business objects
+	 * @return		List<StandingInstruction>
+
+    @GetMapping("/Beneficiary")
+    public List<StandingInstruction> Beneficiary(UUID parentId) {
+		List<StandingInstruction> standingInstructionList = load(parentId).getBeneficiary;
+		return standingInstructionList;
+	}
+	 */
     /**
      * save Beneficiary on StandingInstruction
      * @param		command AssignBeneficiaryToStandingInstructionCommand

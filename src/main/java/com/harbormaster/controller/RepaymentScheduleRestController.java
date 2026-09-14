@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class RepaymentScheduleRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all RepaymentSchedule business objects
-     * @return		Set<RepaymentSchedule>
+     * @return		List<RepaymentSchedule>
      */
     @GetMapping("/")
     public List<RepaymentSchedule> loadAll() {                
@@ -156,6 +156,16 @@ public class RepaymentScheduleRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all LoanAccount} business objects
+	 * @return		List<RepaymentSchedule>
+
+    @GetMapping("/LoanAccount")
+    public List<RepaymentSchedule> LoanAccount(UUID parentId) {
+		List<RepaymentSchedule> repaymentScheduleList = load(parentId).getLoanAccount;
+		return repaymentScheduleList;
+	}
+	 */
     /**
      * save LoanAccount on RepaymentSchedule
      * @param		command AssignLoanAccountToRepaymentScheduleCommand
@@ -176,6 +186,16 @@ public class RepaymentScheduleRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned LoanAccount with Id " + command.getRepaymentScheduleId()  );
 	}
 	
+	/**
+	 * Handles loading all Payment} business objects
+	 * @return		List<RepaymentSchedule>
+
+    @GetMapping("/Payment")
+    public List<RepaymentSchedule> Payment(UUID parentId) {
+		List<RepaymentSchedule> repaymentScheduleList = load(parentId).getPayment;
+		return repaymentScheduleList;
+	}
+	 */
     /**
      * save Payment on RepaymentSchedule
      * @param		command AssignPaymentToRepaymentScheduleCommand

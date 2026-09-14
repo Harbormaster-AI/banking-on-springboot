@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class PaymentCardRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all PaymentCard business objects
-     * @return		Set<PaymentCard>
+     * @return		List<PaymentCard>
      */
     @GetMapping("/")
     public List<PaymentCard> loadAll() {                
@@ -156,6 +156,16 @@ public class PaymentCardRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<PaymentCard>
+
+    @GetMapping("/Bank")
+    public List<PaymentCard> Bank(UUID parentId) {
+		List<PaymentCard> paymentCardList = load(parentId).getBank;
+		return paymentCardList;
+	}
+	 */
     /**
      * save Bank on PaymentCard
      * @param		command AssignBankToPaymentCardCommand
@@ -176,6 +186,16 @@ public class PaymentCardRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getPaymentCardId()  );
 	}
 	
+	/**
+	 * Handles loading all Account} business objects
+	 * @return		List<PaymentCard>
+
+    @GetMapping("/Account")
+    public List<PaymentCard> Account(UUID parentId) {
+		List<PaymentCard> paymentCardList = load(parentId).getAccount;
+		return paymentCardList;
+	}
+	 */
     /**
      * save Account on PaymentCard
      * @param		command AssignAccountToPaymentCardCommand
@@ -196,6 +216,16 @@ public class PaymentCardRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Account with Id " + command.getPaymentCardId()  );
 	}
 	
+	/**
+	 * Handles loading all Customer} business objects
+	 * @return		List<PaymentCard>
+
+    @GetMapping("/Customer")
+    public List<PaymentCard> Customer(UUID parentId) {
+		List<PaymentCard> paymentCardList = load(parentId).getCustomer;
+		return paymentCardList;
+	}
+	 */
     /**
      * save Customer on PaymentCard
      * @param		command AssignCustomerToPaymentCardCommand
@@ -216,6 +246,16 @@ public class PaymentCardRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Customer with Id " + command.getPaymentCardId()  );
 	}
 	
+
+	/**
+	 * Handles loading all Transactions} business objects
+	 * @return		List<PaymentCard>
+
+    @GetMapping("/Transactions")
+    public List<PaymentCard> Transactions(UUID parentId) {
+		List<PaymentCard> paymentCardList = load(parentId).getTransactions;
+		return paymentCardList;
+	}
 
     /**
      * save Transactions on PaymentCard

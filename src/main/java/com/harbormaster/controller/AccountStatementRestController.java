@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class AccountStatementRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all AccountStatement business objects
-     * @return		Set<AccountStatement>
+     * @return		List<AccountStatement>
      */
     @GetMapping("/")
     public List<AccountStatement> loadAll() {                
@@ -156,6 +156,16 @@ public class AccountStatementRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Account} business objects
+	 * @return		List<AccountStatement>
+
+    @GetMapping("/Account")
+    public List<AccountStatement> Account(UUID parentId) {
+		List<AccountStatement> accountStatementList = load(parentId).getAccount;
+		return accountStatementList;
+	}
+	 */
     /**
      * save Account on AccountStatement
      * @param		command AssignAccountToAccountStatementCommand

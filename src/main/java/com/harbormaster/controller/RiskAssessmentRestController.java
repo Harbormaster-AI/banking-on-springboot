@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class RiskAssessmentRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all RiskAssessment business objects
-     * @return		Set<RiskAssessment>
+     * @return		List<RiskAssessment>
      */
     @GetMapping("/")
     public List<RiskAssessment> loadAll() {                
@@ -156,6 +156,16 @@ public class RiskAssessmentRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all KycProfile} business objects
+	 * @return		List<RiskAssessment>
+
+    @GetMapping("/KycProfile")
+    public List<RiskAssessment> KycProfile(UUID parentId) {
+		List<RiskAssessment> riskAssessmentList = load(parentId).getKycProfile;
+		return riskAssessmentList;
+	}
+	 */
     /**
      * save KycProfile on RiskAssessment
      * @param		command AssignKycProfileToRiskAssessmentCommand

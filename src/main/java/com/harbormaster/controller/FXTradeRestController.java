@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class FXTradeRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all FXTrade business objects
-     * @return		Set<FXTrade>
+     * @return		List<FXTrade>
      */
     @GetMapping("/")
     public List<FXTrade> loadAll() {                
@@ -156,6 +156,16 @@ public class FXTradeRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Customer} business objects
+	 * @return		List<FXTrade>
+
+    @GetMapping("/Customer")
+    public List<FXTrade> Customer(UUID parentId) {
+		List<FXTrade> fXTradeList = load(parentId).getCustomer;
+		return fXTradeList;
+	}
+	 */
     /**
      * save Customer on FXTrade
      * @param		command AssignCustomerToFXTradeCommand
@@ -176,6 +186,16 @@ public class FXTradeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Customer with Id " + command.getFXTradeId()  );
 	}
 	
+	/**
+	 * Handles loading all Bank} business objects
+	 * @return		List<FXTrade>
+
+    @GetMapping("/Bank")
+    public List<FXTrade> Bank(UUID parentId) {
+		List<FXTrade> fXTradeList = load(parentId).getBank;
+		return fXTradeList;
+	}
+	 */
     /**
      * save Bank on FXTrade
      * @param		command AssignBankToFXTradeCommand
@@ -196,6 +216,16 @@ public class FXTradeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Bank with Id " + command.getFXTradeId()  );
 	}
 	
+	/**
+	 * Handles loading all ExchangeRate} business objects
+	 * @return		List<FXTrade>
+
+    @GetMapping("/ExchangeRate")
+    public List<FXTrade> ExchangeRate(UUID parentId) {
+		List<FXTrade> fXTradeList = load(parentId).getExchangeRate;
+		return fXTradeList;
+	}
+	 */
     /**
      * save ExchangeRate on FXTrade
      * @param		command AssignExchangeRateToFXTradeCommand
@@ -216,6 +246,16 @@ public class FXTradeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned ExchangeRate with Id " + command.getFXTradeId()  );
 	}
 	
+	/**
+	 * Handles loading all SourceAccount} business objects
+	 * @return		List<FXTrade>
+
+    @GetMapping("/SourceAccount")
+    public List<FXTrade> SourceAccount(UUID parentId) {
+		List<FXTrade> fXTradeList = load(parentId).getSourceAccount;
+		return fXTradeList;
+	}
+	 */
     /**
      * save SourceAccount on FXTrade
      * @param		command AssignSourceAccountToFXTradeCommand
@@ -236,6 +276,16 @@ public class FXTradeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned SourceAccount with Id " + command.getFXTradeId()  );
 	}
 	
+	/**
+	 * Handles loading all DestinationAccount} business objects
+	 * @return		List<FXTrade>
+
+    @GetMapping("/DestinationAccount")
+    public List<FXTrade> DestinationAccount(UUID parentId) {
+		List<FXTrade> fXTradeList = load(parentId).getDestinationAccount;
+		return fXTradeList;
+	}
+	 */
     /**
      * save DestinationAccount on FXTrade
      * @param		command AssignDestinationAccountToFXTradeCommand
@@ -256,6 +306,16 @@ public class FXTradeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned DestinationAccount with Id " + command.getFXTradeId()  );
 	}
 	
+	/**
+	 * Handles loading all Transaction} business objects
+	 * @return		List<FXTrade>
+
+    @GetMapping("/Transaction")
+    public List<FXTrade> Transaction(UUID parentId) {
+		List<FXTrade> fXTradeList = load(parentId).getTransaction;
+		return fXTradeList;
+	}
+	 */
     /**
      * save Transaction on FXTrade
      * @param		command AssignTransactionToFXTradeCommand

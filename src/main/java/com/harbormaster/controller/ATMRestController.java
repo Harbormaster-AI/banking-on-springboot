@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class ATMRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all ATM business objects
-     * @return		Set<ATM>
+     * @return		List<ATM>
      */
     @GetMapping("/")
     public List<ATM> loadAll() {                
@@ -156,6 +156,16 @@ public class ATMRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Branch} business objects
+	 * @return		List<ATM>
+
+    @GetMapping("/Branch")
+    public List<ATM> Branch(UUID parentId) {
+		List<ATM> aTMList = load(parentId).getBranch;
+		return aTMList;
+	}
+	 */
     /**
      * save Branch on ATM
      * @param		command AssignBranchToATMCommand

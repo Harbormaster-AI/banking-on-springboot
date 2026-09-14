@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class FeeChargeRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all FeeCharge business objects
-     * @return		Set<FeeCharge>
+     * @return		List<FeeCharge>
      */
     @GetMapping("/")
     public List<FeeCharge> loadAll() {                
@@ -156,6 +156,16 @@ public class FeeChargeRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Account} business objects
+	 * @return		List<FeeCharge>
+
+    @GetMapping("/Account")
+    public List<FeeCharge> Account(UUID parentId) {
+		List<FeeCharge> feeChargeList = load(parentId).getAccount;
+		return feeChargeList;
+	}
+	 */
     /**
      * save Account on FeeCharge
      * @param		command AssignAccountToFeeChargeCommand
@@ -176,6 +186,16 @@ public class FeeChargeRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Account with Id " + command.getFeeChargeId()  );
 	}
 	
+	/**
+	 * Handles loading all LoanAccount} business objects
+	 * @return		List<FeeCharge>
+
+    @GetMapping("/LoanAccount")
+    public List<FeeCharge> LoanAccount(UUID parentId) {
+		List<FeeCharge> feeChargeList = load(parentId).getLoanAccount;
+		return feeChargeList;
+	}
+	 */
     /**
      * save LoanAccount on FeeCharge
      * @param		command AssignLoanAccountToFeeChargeCommand

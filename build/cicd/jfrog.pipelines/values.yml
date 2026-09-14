@@ -2,7 +2,7 @@ gitRepo:
   gitProvider: 
   path: /banking-on-springboot
   TestDBUrl: 
-  TestDBName: bankingonspringboot_test_db
+  TestDBName: bankingOnSpringboot_test_db
   TestDBPassword: 
   TestDBDialect: org.hibernate.dialect.MySQL8Dialect 
   TestDBDriver: com.mysql.cj.jdbc.Driver

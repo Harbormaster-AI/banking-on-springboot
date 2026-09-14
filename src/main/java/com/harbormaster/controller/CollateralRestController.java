@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class CollateralRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Collateral business objects
-     * @return		Set<Collateral>
+     * @return		List<Collateral>
      */
     @GetMapping("/")
     public List<Collateral> loadAll() {                
@@ -156,6 +156,16 @@ public class CollateralRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all LoanAccount} business objects
+	 * @return		List<Collateral>
+
+    @GetMapping("/LoanAccount")
+    public List<Collateral> LoanAccount(UUID parentId) {
+		List<Collateral> collateralList = load(parentId).getLoanAccount;
+		return collateralList;
+	}
+	 */
     /**
      * save LoanAccount on Collateral
      * @param		command AssignLoanAccountToCollateralCommand

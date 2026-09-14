@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class KycProfileRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all KycProfile business objects
-     * @return		Set<KycProfile>
+     * @return		List<KycProfile>
      */
     @GetMapping("/")
     public List<KycProfile> loadAll() {                
@@ -156,6 +156,16 @@ public class KycProfileRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Customer} business objects
+	 * @return		List<KycProfile>
+
+    @GetMapping("/Customer")
+    public List<KycProfile> Customer(UUID parentId) {
+		List<KycProfile> kycProfileList = load(parentId).getCustomer;
+		return kycProfileList;
+	}
+	 */
     /**
      * save Customer on KycProfile
      * @param		command AssignCustomerToKycProfileCommand
@@ -176,6 +186,16 @@ public class KycProfileRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Customer with Id " + command.getKycProfileId()  );
 	}
 	
+
+	/**
+	 * Handles loading all IdentityDocuments} business objects
+	 * @return		List<KycProfile>
+
+    @GetMapping("/IdentityDocuments")
+    public List<KycProfile> IdentityDocuments(UUID parentId) {
+		List<KycProfile> kycProfileList = load(parentId).getIdentityDocuments;
+		return kycProfileList;
+	}
 
     /**
      * save IdentityDocuments on KycProfile
@@ -198,6 +218,16 @@ public class KycProfileRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully removed IdentityDocuments with Id " + command.getKycProfileId()  );
 	}
 
+	/**
+	 * Handles loading all RiskAssessments} business objects
+	 * @return		List<KycProfile>
+
+    @GetMapping("/RiskAssessments")
+    public List<KycProfile> RiskAssessments(UUID parentId) {
+		List<KycProfile> kycProfileList = load(parentId).getRiskAssessments;
+		return kycProfileList;
+	}
+
     /**
      * save RiskAssessments on KycProfile
      * @param		command AssignRiskAssessmentsToKycProfileCommand
@@ -217,6 +247,16 @@ public class KycProfileRestController extends BaseSpringRestController {
 	{		
 		service.removeFromRiskAssessments( command );
 		LOGGER.info( "Successfully removed RiskAssessments with Id " + command.getKycProfileId()  );
+	}
+
+	/**
+	 * Handles loading all Screenings} business objects
+	 * @return		List<KycProfile>
+
+    @GetMapping("/Screenings")
+    public List<KycProfile> Screenings(UUID parentId) {
+		List<KycProfile> kycProfileList = load(parentId).getScreenings;
+		return kycProfileList;
 	}
 
     /**

@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class FundsTransferRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all FundsTransfer business objects
-     * @return		Set<FundsTransfer>
+     * @return		List<FundsTransfer>
      */
     @GetMapping("/")
     public List<FundsTransfer> loadAll() {                
@@ -156,6 +156,16 @@ public class FundsTransferRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all SourceAccount} business objects
+	 * @return		List<FundsTransfer>
+
+    @GetMapping("/SourceAccount")
+    public List<FundsTransfer> SourceAccount(UUID parentId) {
+		List<FundsTransfer> fundsTransferList = load(parentId).getSourceAccount;
+		return fundsTransferList;
+	}
+	 */
     /**
      * save SourceAccount on FundsTransfer
      * @param		command AssignSourceAccountToFundsTransferCommand
@@ -176,6 +186,16 @@ public class FundsTransferRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned SourceAccount with Id " + command.getFundsTransferId()  );
 	}
 	
+	/**
+	 * Handles loading all DestinationAccount} business objects
+	 * @return		List<FundsTransfer>
+
+    @GetMapping("/DestinationAccount")
+    public List<FundsTransfer> DestinationAccount(UUID parentId) {
+		List<FundsTransfer> fundsTransferList = load(parentId).getDestinationAccount;
+		return fundsTransferList;
+	}
+	 */
     /**
      * save DestinationAccount on FundsTransfer
      * @param		command AssignDestinationAccountToFundsTransferCommand
@@ -196,6 +216,16 @@ public class FundsTransferRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned DestinationAccount with Id " + command.getFundsTransferId()  );
 	}
 	
+	/**
+	 * Handles loading all ExternalBeneficiary} business objects
+	 * @return		List<FundsTransfer>
+
+    @GetMapping("/ExternalBeneficiary")
+    public List<FundsTransfer> ExternalBeneficiary(UUID parentId) {
+		List<FundsTransfer> fundsTransferList = load(parentId).getExternalBeneficiary;
+		return fundsTransferList;
+	}
+	 */
     /**
      * save ExternalBeneficiary on FundsTransfer
      * @param		command AssignExternalBeneficiaryToFundsTransferCommand
@@ -216,6 +246,16 @@ public class FundsTransferRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned ExternalBeneficiary with Id " + command.getFundsTransferId()  );
 	}
 	
+	/**
+	 * Handles loading all InitiatedBy} business objects
+	 * @return		List<FundsTransfer>
+
+    @GetMapping("/InitiatedBy")
+    public List<FundsTransfer> InitiatedBy(UUID parentId) {
+		List<FundsTransfer> fundsTransferList = load(parentId).getInitiatedBy;
+		return fundsTransferList;
+	}
+	 */
     /**
      * save InitiatedBy on FundsTransfer
      * @param		command AssignInitiatedByToFundsTransferCommand
@@ -236,6 +276,16 @@ public class FundsTransferRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned InitiatedBy with Id " + command.getFundsTransferId()  );
 	}
 	
+
+	/**
+	 * Handles loading all Transactions} business objects
+	 * @return		List<FundsTransfer>
+
+    @GetMapping("/Transactions")
+    public List<FundsTransfer> Transactions(UUID parentId) {
+		List<FundsTransfer> fundsTransferList = load(parentId).getTransactions;
+		return fundsTransferList;
+	}
 
     /**
      * save Transactions on FundsTransfer

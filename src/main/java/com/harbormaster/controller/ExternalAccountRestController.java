@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class ExternalAccountRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all ExternalAccount business objects
-     * @return		Set<ExternalAccount>
+     * @return		List<ExternalAccount>
      */
     @GetMapping("/")
     public List<ExternalAccount> loadAll() {                
@@ -156,6 +156,16 @@ public class ExternalAccountRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Customer} business objects
+	 * @return		List<ExternalAccount>
+
+    @GetMapping("/Customer")
+    public List<ExternalAccount> Customer(UUID parentId) {
+		List<ExternalAccount> externalAccountList = load(parentId).getCustomer;
+		return externalAccountList;
+	}
+	 */
     /**
      * save Customer on ExternalAccount
      * @param		command AssignCustomerToExternalAccountCommand
@@ -176,6 +186,16 @@ public class ExternalAccountRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Customer with Id " + command.getExternalAccountId()  );
 	}
 	
+
+	/**
+	 * Handles loading all Transactions} business objects
+	 * @return		List<ExternalAccount>
+
+    @GetMapping("/Transactions")
+    public List<ExternalAccount> Transactions(UUID parentId) {
+		List<ExternalAccount> externalAccountList = load(parentId).getTransactions;
+		return externalAccountList;
+	}
 
     /**
      * save Transactions on ExternalAccount

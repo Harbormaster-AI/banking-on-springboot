@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class LoanPaymentRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all LoanPayment business objects
-     * @return		Set<LoanPayment>
+     * @return		List<LoanPayment>
      */
     @GetMapping("/")
     public List<LoanPayment> loadAll() {                
@@ -156,6 +156,16 @@ public class LoanPaymentRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all LoanAccount} business objects
+	 * @return		List<LoanPayment>
+
+    @GetMapping("/LoanAccount")
+    public List<LoanPayment> LoanAccount(UUID parentId) {
+		List<LoanPayment> loanPaymentList = load(parentId).getLoanAccount;
+		return loanPaymentList;
+	}
+	 */
     /**
      * save LoanAccount on LoanPayment
      * @param		command AssignLoanAccountToLoanPaymentCommand
@@ -176,6 +186,16 @@ public class LoanPaymentRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned LoanAccount with Id " + command.getLoanPaymentId()  );
 	}
 	
+	/**
+	 * Handles loading all Transaction} business objects
+	 * @return		List<LoanPayment>
+
+    @GetMapping("/Transaction")
+    public List<LoanPayment> Transaction(UUID parentId) {
+		List<LoanPayment> loanPaymentList = load(parentId).getTransaction;
+		return loanPaymentList;
+	}
+	 */
     /**
      * save Transaction on LoanPayment
      * @param		command AssignTransactionToLoanPaymentCommand

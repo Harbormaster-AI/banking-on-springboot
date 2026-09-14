@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class ScreeningResultRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all ScreeningResult business objects
-     * @return		Set<ScreeningResult>
+     * @return		List<ScreeningResult>
      */
     @GetMapping("/")
     public List<ScreeningResult> loadAll() {                
@@ -156,6 +156,16 @@ public class ScreeningResultRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all KycProfile} business objects
+	 * @return		List<ScreeningResult>
+
+    @GetMapping("/KycProfile")
+    public List<ScreeningResult> KycProfile(UUID parentId) {
+		List<ScreeningResult> screeningResultList = load(parentId).getKycProfile;
+		return screeningResultList;
+	}
+	 */
     /**
      * save KycProfile on ScreeningResult
      * @param		command AssignKycProfileToScreeningResultCommand

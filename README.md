@@ -7,7 +7,7 @@ Harbormaster
 
 
 ## Application
-- Name: banking-on-springboot
+- Name: bankingOnSpringboot
 - Description: Banking Restful Backend
 - Company Name: Turnstone National Bank
 

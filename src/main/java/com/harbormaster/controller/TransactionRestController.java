@@ -48,7 +48,7 @@ import com.harbormaster.exception.*;
  *      <h3>Blueprint</h3>
  * 			<table>
  *          <tr><td>name</td><td>Spring Boot 3.5</td></tr>
- *          <tr><td>published</td><td>09/05/2026</td></tr>
+ *          <tr><td>published</td><td>09/12/2026</td></tr>
  *          <tr><td>design pattern</td><td>ServiceLayer</td></tr>
  *          <tr><td>architecture style</td><td>Layered</td></tr>
  *          </table>
@@ -143,7 +143,7 @@ public class TransactionRestController extends BaseSpringRestController {
 
     /**
      * Handles loading all Transaction business objects
-     * @return		Set<Transaction>
+     * @return		List<Transaction>
      */
     @GetMapping("/")
     public List<Transaction> loadAll() {                
@@ -156,6 +156,16 @@ public class TransactionRestController extends BaseSpringRestController {
                             
     }
 
+	/**
+	 * Handles loading all Account} business objects
+	 * @return		List<Transaction>
+
+    @GetMapping("/Account")
+    public List<Transaction> Account(UUID parentId) {
+		List<Transaction> transactionList = load(parentId).getAccount;
+		return transactionList;
+	}
+	 */
     /**
      * save Account on Transaction
      * @param		command AssignAccountToTransactionCommand
@@ -176,6 +186,16 @@ public class TransactionRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned Account with Id " + command.getTransactionId()  );
 	}
 	
+	/**
+	 * Handles loading all ExternalCounterparty} business objects
+	 * @return		List<Transaction>
+
+    @GetMapping("/ExternalCounterparty")
+    public List<Transaction> ExternalCounterparty(UUID parentId) {
+		List<Transaction> transactionList = load(parentId).getExternalCounterparty;
+		return transactionList;
+	}
+	 */
     /**
      * save ExternalCounterparty on Transaction
      * @param		command AssignExternalCounterpartyToTransactionCommand
@@ -196,6 +216,16 @@ public class TransactionRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned ExternalCounterparty with Id " + command.getTransactionId()  );
 	}
 	
+	/**
+	 * Handles loading all PaymentCard} business objects
+	 * @return		List<Transaction>
+
+    @GetMapping("/PaymentCard")
+    public List<Transaction> PaymentCard(UUID parentId) {
+		List<Transaction> transactionList = load(parentId).getPaymentCard;
+		return transactionList;
+	}
+	 */
     /**
      * save PaymentCard on Transaction
      * @param		command AssignPaymentCardToTransactionCommand
@@ -216,6 +246,16 @@ public class TransactionRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned PaymentCard with Id " + command.getTransactionId()  );
 	}
 	
+	/**
+	 * Handles loading all FundsTransfer} business objects
+	 * @return		List<Transaction>
+
+    @GetMapping("/FundsTransfer")
+    public List<Transaction> FundsTransfer(UUID parentId) {
+		List<Transaction> transactionList = load(parentId).getFundsTransfer;
+		return transactionList;
+	}
+	 */
     /**
      * save FundsTransfer on Transaction
      * @param		command AssignFundsTransferToTransactionCommand
@@ -236,6 +276,16 @@ public class TransactionRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned FundsTransfer with Id " + command.getTransactionId()  );
 	}
 	
+	/**
+	 * Handles loading all FxTrade} business objects
+	 * @return		List<Transaction>
+
+    @GetMapping("/FxTrade")
+    public List<Transaction> FxTrade(UUID parentId) {
+		List<Transaction> transactionList = load(parentId).getFxTrade;
+		return transactionList;
+	}
+	 */
     /**
      * save FxTrade on Transaction
      * @param		command AssignFxTradeToTransactionCommand
@@ -256,6 +306,16 @@ public class TransactionRestController extends BaseSpringRestController {
 		LOGGER.info( "Successfully unassigned FxTrade with Id " + command.getTransactionId()  );
 	}
 	
+	/**
+	 * Handles loading all Dispute} business objects
+	 * @return		List<Transaction>
+
+    @GetMapping("/Dispute")
+    public List<Transaction> Dispute(UUID parentId) {
+		List<Transaction> transactionList = load(parentId).getDispute;
+		return transactionList;
+	}
+	 */
     /**
      * save Dispute on Transaction
      * @param		command AssignDisputeToTransactionCommand

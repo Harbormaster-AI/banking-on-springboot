@@ -27,8 +27,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <packaging>jar</packaging>
-    <artifactId>banking-on-springboot</artifactId>
-    <name>banking-on-springboot</name>
+    <artifactId>bankingOnSpringboot</artifactId>
+    <name>bankingOnSpringboot</name>
     <description>Banking Restful Backend</description>
 
     <parent>
