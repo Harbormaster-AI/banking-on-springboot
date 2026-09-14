@@ -266,7 +266,7 @@ public class FundsTransferTest
      * @return CreateFundsTransferCommand alias
      */
 	protected CreateFundsTransferCommand generateNewCommand() {
-    CreateFundsTransferCommand command = new CreateFundsTransferCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateFundsTransferCommand command = new CreateFundsTransferCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Money(),   new Date(),   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Money(),  PaymentMethod.values()[0],  PaymentStatus.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class FundsTransferTest
      * @return UpdateFundsTransferCommand alias
      */
 	protected UpdateFundsTransferCommand generateUpdateCommand() {
-    UpdateFundsTransferCommand command = new UpdateFundsTransferCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateFundsTransferCommand command = new UpdateFundsTransferCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Money(),   new Date(),   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Money(),  null,  null,  null,  null,  new HashSet<>(),  PaymentMethod.values()[0],  PaymentStatus.values()[0] );
 
     return( command );
 }

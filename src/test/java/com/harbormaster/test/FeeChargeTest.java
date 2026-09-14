@@ -266,7 +266,7 @@ public class FeeChargeTest
      * @return CreateFeeChargeCommand alias
      */
 	protected CreateFeeChargeCommand generateNewCommand() {
-    CreateFeeChargeCommand command = new CreateFeeChargeCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateFeeChargeCommand command = new CreateFeeChargeCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Money(),   new Date(),  FeeType.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class FeeChargeTest
      * @return UpdateFeeChargeCommand alias
      */
 	protected UpdateFeeChargeCommand generateUpdateCommand() {
-    UpdateFeeChargeCommand command = new UpdateFeeChargeCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateFeeChargeCommand command = new UpdateFeeChargeCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Money(),   new Date(),  null,  null,  FeeType.values()[0] );
 
     return( command );
 }

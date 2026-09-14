@@ -266,7 +266,7 @@ public class RiskAssessmentTest
      * @return CreateRiskAssessmentCommand alias
      */
 	protected CreateRiskAssessmentCommand generateNewCommand() {
-    CreateRiskAssessmentCommand command = new CreateRiskAssessmentCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateRiskAssessmentCommand command = new CreateRiskAssessmentCommand( null,  0,   new Date(),  RiskRating.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class RiskAssessmentTest
      * @return UpdateRiskAssessmentCommand alias
      */
 	protected UpdateRiskAssessmentCommand generateUpdateCommand() {
-    UpdateRiskAssessmentCommand command = new UpdateRiskAssessmentCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateRiskAssessmentCommand command = new UpdateRiskAssessmentCommand( null,  0,   new Date(),  null,  RiskRating.values()[0] );
 
     return( command );
 }

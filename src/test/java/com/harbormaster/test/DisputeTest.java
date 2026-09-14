@@ -266,7 +266,7 @@ public class DisputeTest
      * @return CreateDisputeCommand alias
      */
 	protected CreateDisputeCommand generateNewCommand() {
-    CreateDisputeCommand command = new CreateDisputeCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateDisputeCommand command = new CreateDisputeCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  DisputeStatus.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class DisputeTest
      * @return UpdateDisputeCommand alias
      */
 	protected UpdateDisputeCommand generateUpdateCommand() {
-    UpdateDisputeCommand command = new UpdateDisputeCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateDisputeCommand command = new UpdateDisputeCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  null,  null,  null,  DisputeStatus.values()[0] );
 
     return( command );
 }

@@ -266,7 +266,7 @@ public class CustomerTest
      * @return CreateCustomerCommand alias
      */
 	protected CreateCustomerCommand generateNewCommand() {
-    CreateCustomerCommand command = new CreateCustomerCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateCustomerCommand command = new CreateCustomerCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  CustomerType.values()[0],  RiskRating.values()[0],  KycStatus.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class CustomerTest
      * @return UpdateCustomerCommand alias
      */
 	protected UpdateCustomerCommand generateUpdateCommand() {
-    UpdateCustomerCommand command = new UpdateCustomerCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateCustomerCommand command = new UpdateCustomerCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  null,  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  CustomerType.values()[0],  RiskRating.values()[0],  KycStatus.values()[0] );
 
     return( command );
 }

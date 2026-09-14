@@ -266,7 +266,7 @@ public class ThirdPartyProviderTest
      * @return CreateThirdPartyProviderCommand alias
      */
 	protected CreateThirdPartyProviderCommand generateNewCommand() {
-    CreateThirdPartyProviderCommand command = new CreateThirdPartyProviderCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateThirdPartyProviderCommand command = new CreateThirdPartyProviderCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16) );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class ThirdPartyProviderTest
      * @return UpdateThirdPartyProviderCommand alias
      */
 	protected UpdateThirdPartyProviderCommand generateUpdateCommand() {
-    UpdateThirdPartyProviderCommand command = new UpdateThirdPartyProviderCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateThirdPartyProviderCommand command = new UpdateThirdPartyProviderCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  new HashSet<>() );
 
     return( command );
 }

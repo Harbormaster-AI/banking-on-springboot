@@ -266,7 +266,7 @@ public class BankingProductTest
      * @return CreateBankingProductCommand alias
      */
 	protected CreateBankingProductCommand generateNewCommand() {
-    CreateBankingProductCommand command = new CreateBankingProductCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateBankingProductCommand command = new CreateBankingProductCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  ProductCategory.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class BankingProductTest
      * @return UpdateBankingProductCommand alias
      */
 	protected UpdateBankingProductCommand generateUpdateCommand() {
-    UpdateBankingProductCommand command = new UpdateBankingProductCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateBankingProductCommand command = new UpdateBankingProductCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  ProductCategory.values()[0] );
 
     return( command );
 }

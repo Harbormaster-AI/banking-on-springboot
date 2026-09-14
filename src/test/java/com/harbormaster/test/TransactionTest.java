@@ -266,7 +266,7 @@ public class TransactionTest
      * @return CreateTransactionCommand alias
      */
 	protected CreateTransactionCommand generateNewCommand() {
-    CreateTransactionCommand command = new CreateTransactionCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateTransactionCommand command = new CreateTransactionCommand( null,   new Date(),   new Date(),  new Money(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  TransactionDirection.values()[0],  TransactionType.values()[0],  TransactionStatus.values()[0],  ChannelType.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class TransactionTest
      * @return UpdateTransactionCommand alias
      */
 	protected UpdateTransactionCommand generateUpdateCommand() {
-    UpdateTransactionCommand command = new UpdateTransactionCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateTransactionCommand command = new UpdateTransactionCommand( null,   new Date(),   new Date(),  new Money(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  null,  null,  null,  null,  null,  TransactionDirection.values()[0],  TransactionType.values()[0],  TransactionStatus.values()[0],  ChannelType.values()[0] );
 
     return( command );
 }

@@ -266,7 +266,7 @@ public class BranchTest
      * @return CreateBranchCommand alias
      */
 	protected CreateBranchCommand generateNewCommand() {
-    CreateBranchCommand command = new CreateBranchCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateBranchCommand command = new CreateBranchCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16) );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class BranchTest
      * @return UpdateBranchCommand alias
      */
 	protected UpdateBranchCommand generateUpdateCommand() {
-    UpdateBranchCommand command = new UpdateBranchCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateBranchCommand command = new UpdateBranchCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  new HashSet<>(),  new HashSet<>(),  new HashSet<>() );
 
     return( command );
 }

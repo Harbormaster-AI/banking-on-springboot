@@ -266,7 +266,7 @@ public class KycProfileTest
      * @return CreateKycProfileCommand alias
      */
 	protected CreateKycProfileCommand generateNewCommand() {
-    CreateKycProfileCommand command = new CreateKycProfileCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateKycProfileCommand command = new CreateKycProfileCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  KycStatus.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class KycProfileTest
      * @return UpdateKycProfileCommand alias
      */
 	protected UpdateKycProfileCommand generateUpdateCommand() {
-    UpdateKycProfileCommand command = new UpdateKycProfileCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateKycProfileCommand command = new UpdateKycProfileCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  null,  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  KycStatus.values()[0] );
 
     return( command );
 }

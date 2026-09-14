@@ -266,7 +266,7 @@ public class ExternalAccountTest
      * @return CreateExternalAccountCommand alias
      */
 	protected CreateExternalAccountCommand generateNewCommand() {
-    CreateExternalAccountCommand command = new CreateExternalAccountCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateExternalAccountCommand command = new CreateExternalAccountCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new IBAN(),  new AccountNumber(),  new BIC(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16) );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class ExternalAccountTest
      * @return UpdateExternalAccountCommand alias
      */
 	protected UpdateExternalAccountCommand generateUpdateCommand() {
-    UpdateExternalAccountCommand command = new UpdateExternalAccountCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateExternalAccountCommand command = new UpdateExternalAccountCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new IBAN(),  new AccountNumber(),  new BIC(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  new HashSet<>() );
 
     return( command );
 }

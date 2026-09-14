@@ -266,7 +266,7 @@ public class AccountStatementTest
      * @return CreateAccountStatementCommand alias
      */
 	protected CreateAccountStatementCommand generateNewCommand() {
-    CreateAccountStatementCommand command = new CreateAccountStatementCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateAccountStatementCommand command = new CreateAccountStatementCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),   new Date(),  new Money(),  new Money(),  StatementDeliveryMethod.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class AccountStatementTest
      * @return UpdateAccountStatementCommand alias
      */
 	protected UpdateAccountStatementCommand generateUpdateCommand() {
-    UpdateAccountStatementCommand command = new UpdateAccountStatementCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateAccountStatementCommand command = new UpdateAccountStatementCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),   new Date(),  new Money(),  new Money(),  null,  StatementDeliveryMethod.values()[0] );
 
     return( command );
 }

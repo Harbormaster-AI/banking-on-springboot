@@ -266,7 +266,7 @@ public class ExchangeRateTest
      * @return CreateExchangeRateCommand alias
      */
 	protected CreateExchangeRateCommand generateNewCommand() {
-    CreateExchangeRateCommand command = new CreateExchangeRateCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateExchangeRateCommand command = new CreateExchangeRateCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  java.math.BigDecimal.ZERO,   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16) );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class ExchangeRateTest
      * @return UpdateExchangeRateCommand alias
      */
 	protected UpdateExchangeRateCommand generateUpdateCommand() {
-    UpdateExchangeRateCommand command = new UpdateExchangeRateCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateExchangeRateCommand command = new UpdateExchangeRateCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  java.math.BigDecimal.ZERO,   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  new HashSet<>() );
 
     return( command );
 }

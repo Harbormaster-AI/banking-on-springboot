@@ -266,7 +266,7 @@ public class IdentityDocumentTest
      * @return CreateIdentityDocumentCommand alias
      */
 	protected CreateIdentityDocumentCommand generateNewCommand() {
-    CreateIdentityDocumentCommand command = new CreateIdentityDocumentCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateIdentityDocumentCommand command = new CreateIdentityDocumentCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  IdentityDocumentType.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class IdentityDocumentTest
      * @return UpdateIdentityDocumentCommand alias
      */
 	protected UpdateIdentityDocumentCommand generateUpdateCommand() {
-    UpdateIdentityDocumentCommand command = new UpdateIdentityDocumentCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateIdentityDocumentCommand command = new UpdateIdentityDocumentCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),   new Date(),  null,  IdentityDocumentType.values()[0] );
 
     return( command );
 }

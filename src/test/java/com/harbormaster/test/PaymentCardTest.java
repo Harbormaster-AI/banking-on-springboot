@@ -266,7 +266,7 @@ public class PaymentCardTest
      * @return CreatePaymentCardCommand alias
      */
 	protected CreatePaymentCardCommand generateNewCommand() {
-    CreatePaymentCardCommand command = new CreatePaymentCardCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreatePaymentCardCommand command = new CreatePaymentCardCommand( null,  new CardPAN(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  0,  0,  CardType.values()[0],  CardStatus.values()[0],  CardNetwork.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class PaymentCardTest
      * @return UpdatePaymentCardCommand alias
      */
 	protected UpdatePaymentCardCommand generateUpdateCommand() {
-    UpdatePaymentCardCommand command = new UpdatePaymentCardCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdatePaymentCardCommand command = new UpdatePaymentCardCommand( null,  new CardPAN(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  0,  0,  null,  null,  null,  new HashSet<>(),  CardType.values()[0],  CardStatus.values()[0],  CardNetwork.values()[0] );
 
     return( command );
 }

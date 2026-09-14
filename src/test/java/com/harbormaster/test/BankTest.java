@@ -266,7 +266,7 @@ public class BankTest
      * @return CreateBankCommand alias
      */
 	protected CreateBankCommand generateNewCommand() {
-    CreateBankCommand command = new CreateBankCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateBankCommand command = new CreateBankCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new BIC(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16) );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class BankTest
      * @return UpdateBankCommand alias
      */
 	protected UpdateBankCommand generateUpdateCommand() {
-    UpdateBankCommand command = new UpdateBankCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateBankCommand command = new UpdateBankCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new BIC(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>(),  new HashSet<>() );
 
     return( command );
 }

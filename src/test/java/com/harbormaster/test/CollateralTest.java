@@ -266,7 +266,7 @@ public class CollateralTest
      * @return CreateCollateralCommand alias
      */
 	protected CreateCollateralCommand generateNewCommand() {
-    CreateCollateralCommand command = new CreateCollateralCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateCollateralCommand command = new CreateCollateralCommand( null,  new Money(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  CollateralType.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class CollateralTest
      * @return UpdateCollateralCommand alias
      */
 	protected UpdateCollateralCommand generateUpdateCommand() {
-    UpdateCollateralCommand command = new UpdateCollateralCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateCollateralCommand command = new UpdateCollateralCommand( null,  new Money(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  null,  CollateralType.values()[0] );
 
     return( command );
 }

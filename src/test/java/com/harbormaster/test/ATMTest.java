@@ -266,7 +266,7 @@ public class ATMTest
      * @return CreateATMCommand alias
      */
 	protected CreateATMCommand generateNewCommand() {
-    CreateATMCommand command = new CreateATMCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateATMCommand command = new CreateATMCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  ATMStatus.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class ATMTest
      * @return UpdateATMCommand alias
      */
 	protected UpdateATMCommand generateUpdateCommand() {
-    UpdateATMCommand command = new UpdateATMCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateATMCommand command = new UpdateATMCommand( null,  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  new Address(),  null,  ATMStatus.values()[0] );
 
     return( command );
 }

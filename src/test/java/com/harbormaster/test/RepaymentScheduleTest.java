@@ -266,7 +266,7 @@ public class RepaymentScheduleTest
      * @return CreateRepaymentScheduleCommand alias
      */
 	protected CreateRepaymentScheduleCommand generateNewCommand() {
-    CreateRepaymentScheduleCommand command = new CreateRepaymentScheduleCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateRepaymentScheduleCommand command = new CreateRepaymentScheduleCommand( null,  0,   new Date(),  new Money(),  new Money(),  new Money(),  InstallmentStatus.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class RepaymentScheduleTest
      * @return UpdateRepaymentScheduleCommand alias
      */
 	protected UpdateRepaymentScheduleCommand generateUpdateCommand() {
-    UpdateRepaymentScheduleCommand command = new UpdateRepaymentScheduleCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateRepaymentScheduleCommand command = new UpdateRepaymentScheduleCommand( null,  0,   new Date(),  new Money(),  new Money(),  new Money(),  null,  null,  InstallmentStatus.values()[0] );
 
     return( command );
 }

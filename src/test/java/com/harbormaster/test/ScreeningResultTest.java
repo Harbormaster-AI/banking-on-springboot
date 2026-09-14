@@ -266,7 +266,7 @@ public class ScreeningResultTest
      * @return CreateScreeningResultCommand alias
      */
 	protected CreateScreeningResultCommand generateNewCommand() {
-    CreateScreeningResultCommand command = new CreateScreeningResultCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    CreateScreeningResultCommand command = new CreateScreeningResultCommand( null,   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  ScreeningOutcome.values()[0] );
 
     return( command );
 }
@@ -277,7 +277,7 @@ public class ScreeningResultTest
      * @return UpdateScreeningResultCommand alias
      */
 	protected UpdateScreeningResultCommand generateUpdateCommand() {
-    UpdateScreeningResultCommand command = new UpdateScreeningResultCommand( #determineDefaultArgs( ${includeAssociations} ) );
+    UpdateScreeningResultCommand command = new UpdateScreeningResultCommand( null,   new Date(),  org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(16),  null,  ScreeningOutcome.values()[0] );
 
     return( command );
 }
