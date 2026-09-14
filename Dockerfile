@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.version="0.0.1"
 LABEL com.harbormaster.blueprint="Spring Boot 3.5"
 LABEL com.harbormaster.model="Banking Industry Domain Model"
 LABEL com.harbormaster.generated="2026-09-14"
-#LABEL com.harbormaster.certification="b69c03e1-d760-48e2-b6bf-19c1489c8cea"
+#LABEL com.harbormaster.certification="390b5d65-bf80-44ab-a286-5b462ecd0c38"
 
 RUN addgroup -S spring && adduser -S -G spring spring
 USER spring:spring

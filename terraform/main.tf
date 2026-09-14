@@ -12,7 +12,7 @@ provider "aws" {
       CreatedBy = "Harbormaster"
       Blueprint = "Spring Boot 3.5"
       DomainModel = "Banking Industry Domain Model"
-      CertificationId = "b69c03e1-d760-48e2-b6bf-19c1489c8cea"
+      CertificationId = "390b5d65-bf80-44ab-a286-5b462ecd0c38"
     }
   }
 }
@@ -39,7 +39,7 @@ resource "local_file" "private_key_pem" {
 }
 
 resource "aws_key_pair" "generated" {
-  key_name   = "pjsk-sshtest-0.4215449626253994"
+  key_name   = "pjsk-sshtest-0.29855260935270733"
   public_key = tls_private_key.generated.public_key_openssh
 
   lifecycle {
