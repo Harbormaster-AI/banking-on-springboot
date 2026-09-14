@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -267,7 +268,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getCustomerId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -285,7 +286,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getCustomerId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 
@@ -303,7 +304,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToAccounts(command.getCustomerId(), command.getAddTo());
+		projector.addToAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -319,7 +320,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromAccounts(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -336,7 +337,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToLoanAccounts(command.getCustomerId(), command.getAddTo());
+		projector.addToLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -352,7 +353,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromLoanAccounts(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -369,7 +370,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToPaymentCards(command.getCustomerId(), command.getAddTo());
+		projector.addToPaymentCards(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -385,7 +386,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromPaymentCards(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromPaymentCards(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -402,7 +403,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToExternalAccounts(command.getCustomerId(), command.getAddTo());
+		projector.addToExternalAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -418,7 +419,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromExternalAccounts(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromExternalAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -435,7 +436,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToFundsTransfers(command.getCustomerId(), command.getAddTo());
+		projector.addToFundsTransfers(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -451,7 +452,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromFundsTransfers(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromFundsTransfers(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -468,7 +469,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToDisputes(command.getCustomerId(), command.getAddTo());
+		projector.addToDisputes(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -484,7 +485,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromDisputes(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromDisputes(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -501,7 +502,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToKycProfiles(command.getCustomerId(), command.getAddTo());
+		projector.addToKycProfiles(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -517,7 +518,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromKycProfiles(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromKycProfiles(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -534,7 +535,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToConsents(command.getCustomerId(), command.getAddTo());
+		projector.addToConsents(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -550,7 +551,7 @@ public class CustomerService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromConsents(command.getCustomerId(), command.getRemoveFrom());
+		projector.removeFromConsents(command.getParentId(), command.getChildIds());
 	}
 
 

@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -248,7 +249,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignTransaction(command.getDisputeId(), command.getAssignment());
+		projector.assignTransaction(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -266,7 +267,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignTransaction(command.getDisputeId());
+		projector.unAssignTransaction(command.getChildId());
 	}
 	
 	/**
@@ -282,7 +283,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignCustomer(command.getDisputeId(), command.getAssignment());
+		projector.assignCustomer(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -300,7 +301,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignCustomer(command.getDisputeId());
+		projector.unAssignCustomer(command.getChildId());
 	}
 	
 	/**
@@ -316,7 +317,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignAccount(command.getDisputeId(), command.getAssignment());
+		projector.assignAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -334,7 +335,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignAccount(command.getDisputeId());
+		projector.unAssignAccount(command.getChildId());
 	}
 	
 	/**
@@ -350,7 +351,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignPaymentCard(command.getDisputeId(), command.getAssignment());
+		projector.assignPaymentCard(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -368,7 +369,7 @@ public class DisputeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignPaymentCard(command.getDisputeId());
+		projector.unAssignPaymentCard(command.getChildId());
 	}
 	
 

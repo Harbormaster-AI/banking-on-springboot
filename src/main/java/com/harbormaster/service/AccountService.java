@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -262,7 +263,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getAccountId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -280,7 +281,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getAccountId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 	/**
@@ -296,7 +297,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBranch(command.getAccountId(), command.getAssignment());
+		projector.assignBranch(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -314,7 +315,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBranch(command.getAccountId());
+		projector.unAssignBranch(command.getChildId());
 	}
 	
 	/**
@@ -330,7 +331,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignProduct(command.getAccountId(), command.getAssignment());
+		projector.assignProduct(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -348,7 +349,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignProduct(command.getAccountId());
+		projector.unAssignProduct(command.getChildId());
 	}
 	
 
@@ -366,7 +367,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToOwners(command.getAccountId(), command.getAddTo());
+		projector.addToOwners(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -382,7 +383,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromOwners(command.getAccountId(), command.getRemoveFrom());
+		projector.removeFromOwners(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -399,7 +400,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToTransactions(command.getAccountId(), command.getAddTo());
+		projector.addToTransactions(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -415,7 +416,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromTransactions(command.getAccountId(), command.getRemoveFrom());
+		projector.removeFromTransactions(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -432,7 +433,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToStatements(command.getAccountId(), command.getAddTo());
+		projector.addToStatements(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -448,7 +449,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromStatements(command.getAccountId(), command.getRemoveFrom());
+		projector.removeFromStatements(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -465,7 +466,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToStandingInstructions(command.getAccountId(), command.getAddTo());
+		projector.addToStandingInstructions(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -481,7 +482,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromStandingInstructions(command.getAccountId(), command.getRemoveFrom());
+		projector.removeFromStandingInstructions(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -498,7 +499,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToFeeCharges(command.getAccountId(), command.getAddTo());
+		projector.addToFeeCharges(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -514,7 +515,7 @@ public class AccountService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromFeeCharges(command.getAccountId(), command.getRemoveFrom());
+		projector.removeFromFeeCharges(command.getParentId(), command.getChildIds());
 	}
 
 

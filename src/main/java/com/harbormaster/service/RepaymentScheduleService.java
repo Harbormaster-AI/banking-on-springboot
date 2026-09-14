@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -250,7 +251,7 @@ public class RepaymentScheduleService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignLoanAccount(command.getRepaymentScheduleId(), command.getAssignment());
+		projector.assignLoanAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -268,7 +269,7 @@ public class RepaymentScheduleService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignLoanAccount(command.getRepaymentScheduleId());
+		projector.unAssignLoanAccount(command.getChildId());
 	}
 	
 	/**
@@ -284,7 +285,7 @@ public class RepaymentScheduleService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignPayment(command.getRepaymentScheduleId(), command.getAssignment());
+		projector.assignPayment(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -302,7 +303,7 @@ public class RepaymentScheduleService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignPayment(command.getRepaymentScheduleId());
+		projector.unAssignPayment(command.getChildId());
 	}
 	
 

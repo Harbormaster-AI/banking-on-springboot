@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -248,7 +249,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getBankingProductId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -266,7 +267,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getBankingProductId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 
@@ -284,7 +285,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToAccounts(command.getBankingProductId(), command.getAddTo());
+		projector.addToAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -300,7 +301,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromAccounts(command.getBankingProductId(), command.getRemoveFrom());
+		projector.removeFromAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -317,7 +318,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToLoanAccounts(command.getBankingProductId(), command.getAddTo());
+		projector.addToLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -333,7 +334,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromLoanAccounts(command.getBankingProductId(), command.getRemoveFrom());
+		projector.removeFromLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -350,7 +351,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToPaymentCards(command.getBankingProductId(), command.getAddTo());
+		projector.addToPaymentCards(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -366,7 +367,7 @@ public class BankingProductService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromPaymentCards(command.getBankingProductId(), command.getRemoveFrom());
+		projector.removeFromPaymentCards(command.getParentId(), command.getChildIds());
 	}
 
 

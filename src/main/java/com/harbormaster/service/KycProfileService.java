@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -246,7 +247,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignCustomer(command.getKycProfileId(), command.getAssignment());
+		projector.assignCustomer(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -264,7 +265,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignCustomer(command.getKycProfileId());
+		projector.unAssignCustomer(command.getChildId());
 	}
 	
 
@@ -282,7 +283,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToIdentityDocuments(command.getKycProfileId(), command.getAddTo());
+		projector.addToIdentityDocuments(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -298,7 +299,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromIdentityDocuments(command.getKycProfileId(), command.getRemoveFrom());
+		projector.removeFromIdentityDocuments(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -315,7 +316,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToRiskAssessments(command.getKycProfileId(), command.getAddTo());
+		projector.addToRiskAssessments(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -331,7 +332,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromRiskAssessments(command.getKycProfileId(), command.getRemoveFrom());
+		projector.removeFromRiskAssessments(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -348,7 +349,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToScreenings(command.getKycProfileId(), command.getAddTo());
+		projector.addToScreenings(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -364,7 +365,7 @@ public class KycProfileService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromScreenings(command.getKycProfileId(), command.getRemoveFrom());
+		projector.removeFromScreenings(command.getParentId(), command.getChildIds());
 	}
 
 

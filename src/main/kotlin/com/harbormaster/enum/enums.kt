@@ -26,12 +26,14 @@ package com.harbormaster.api;
 // --------------------------------------------
 // enum declarations
 // --------------------------------------------
+
 // --------------------------------------------
 // enum CustomerType
 // --------------------------------------------
 enum class CustomerType {
     Individual, Business, NonProfit, Government
 }
+
 
 // --------------------------------------------
 // enum AccountType
@@ -40,12 +42,14 @@ enum class AccountType {
     Checking, Savings, MoneyMarket, TimeDeposit
 }
 
+
 // --------------------------------------------
 // enum AccountStatus
 // --------------------------------------------
 enum class AccountStatus {
     Open, Frozen, Dormant, Closed
 }
+
 
 // --------------------------------------------
 // enum AccountOwnershipType
@@ -54,12 +58,14 @@ enum class AccountOwnershipType {
     Sole, Joint, Corporate, Trust
 }
 
+
 // --------------------------------------------
 // enum StatementDeliveryMethod
 // --------------------------------------------
 enum class StatementDeliveryMethod {
     Electronic, Paper
 }
+
 
 // --------------------------------------------
 // enum TransactionType
@@ -68,12 +74,14 @@ enum class TransactionType {
     Deposit, Withdrawal, Transfer, Payment, Fee, Interest, Adjustment, Chargeback, Refund, FXConversion
 }
 
+
 // --------------------------------------------
 // enum TransactionStatus
 // --------------------------------------------
 enum class TransactionStatus {
     Pending, Posted, Reversed, Failed, Cancelled
 }
+
 
 // --------------------------------------------
 // enum TransactionDirection
@@ -82,12 +90,14 @@ enum class TransactionDirection {
     Credit, Debit
 }
 
+
 // --------------------------------------------
 // enum ChannelType
 // --------------------------------------------
 enum class ChannelType {
     Branch, Online, Mobile, ATM, API, CallCenter
 }
+
 
 // --------------------------------------------
 // enum PaymentMethod
@@ -96,12 +106,14 @@ enum class PaymentMethod {
     InternalTransfer, ACH, Wire, SEPA, SWIFT, Card, Cash, Check, MobileWallet
 }
 
+
 // --------------------------------------------
 // enum PaymentStatus
 // --------------------------------------------
 enum class PaymentStatus {
     Initiated, InProcess, Settled, Failed, Reversed, Cancelled
 }
+
 
 // --------------------------------------------
 // enum StandingInstructionFrequency
@@ -110,12 +122,14 @@ enum class StandingInstructionFrequency {
     OneTime, Weekly, BiWeekly, Monthly, Quarterly, Annually
 }
 
+
 // --------------------------------------------
 // enum StandingInstructionStatus
 // --------------------------------------------
 enum class StandingInstructionStatus {
     Active, Paused, Cancelled, Completed
 }
+
 
 // --------------------------------------------
 // enum CardType
@@ -124,12 +138,14 @@ enum class CardType {
     Debit, Credit, Prepaid, Virtual
 }
 
+
 // --------------------------------------------
 // enum CardStatus
 // --------------------------------------------
 enum class CardStatus {
     Active, Blocked, LostStolen, Expired, Closed
 }
+
 
 // --------------------------------------------
 // enum CardNetwork
@@ -138,12 +154,14 @@ enum class CardNetwork {
     Visa, Mastercard, Amex, Discover, UnionPay, Other
 }
 
+
 // --------------------------------------------
 // enum LoanType
 // --------------------------------------------
 enum class LoanType {
     Mortgage, Personal, Auto, SmallBusiness, CreditLine, Student
 }
+
 
 // --------------------------------------------
 // enum LoanStatus
@@ -152,12 +170,14 @@ enum class LoanStatus {
     Applied, Approved, Active, Delinquent, Defaulted, Closed
 }
 
+
 // --------------------------------------------
 // enum RateType
 // --------------------------------------------
 enum class RateType {
     Fixed, Variable
 }
+
 
 // --------------------------------------------
 // enum InterestCompounding
@@ -166,12 +186,14 @@ enum class InterestCompounding {
     Daily, Monthly, Quarterly, Annually
 }
 
+
 // --------------------------------------------
 // enum InstallmentStatus
 // --------------------------------------------
 enum class InstallmentStatus {
     Due, Paid, Overdue, Deferred
 }
+
 
 // --------------------------------------------
 // enum FeeType
@@ -180,12 +202,14 @@ enum class FeeType {
     Maintenance, Overdraft, Wire, ATM, CardAnnual, LatePayment, EarlyWithdrawal, ReplacementCard
 }
 
+
 // --------------------------------------------
 // enum RiskRating
 // --------------------------------------------
 enum class RiskRating {
     Low, Medium, High
 }
+
 
 // --------------------------------------------
 // enum KycStatus
@@ -194,12 +218,14 @@ enum class KycStatus {
     Pending, Verified, Rejected, Expired
 }
 
+
 // --------------------------------------------
 // enum IdentityDocumentType
 // --------------------------------------------
 enum class IdentityDocumentType {
     Passport, NationalID, DriverLicense, ResidencePermit, BusinessRegistration, TaxCertificate
 }
+
 
 // --------------------------------------------
 // enum ScreeningOutcome
@@ -208,12 +234,14 @@ enum class ScreeningOutcome {
     Clear, Match, Review
 }
 
+
 // --------------------------------------------
 // enum TradeStatus
 // --------------------------------------------
 enum class TradeStatus {
     Booked, Settled, Cancelled
 }
+
 
 // --------------------------------------------
 // enum ATMStatus
@@ -222,12 +250,14 @@ enum class ATMStatus {
     InService, OutOfService, Maintenance
 }
 
+
 // --------------------------------------------
 // enum ConsentType
 // --------------------------------------------
 enum class ConsentType {
     OpenBanking, PaymentInitiation, AccountInformation, Marketing, DataSharing
 }
+
 
 // --------------------------------------------
 // enum ConsentStatus
@@ -236,6 +266,7 @@ enum class ConsentStatus {
     Active, Revoked, Expired
 }
 
+
 // --------------------------------------------
 // enum DisputeStatus
 // --------------------------------------------
@@ -243,12 +274,14 @@ enum class DisputeStatus {
     Open, UnderReview, Resolved, Rejected, Withdrawn
 }
 
+
 // --------------------------------------------
 // enum ProductCategory
 // --------------------------------------------
 enum class ProductCategory {
     Deposit, Loan, Card, PaymentService, Investment
 }
+
 
 // --------------------------------------------
 // enum CollateralType

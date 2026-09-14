@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -245,7 +246,7 @@ public class IdentityDocumentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignKycProfile(command.getIdentityDocumentId(), command.getAssignment());
+		projector.assignKycProfile(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -263,7 +264,7 @@ public class IdentityDocumentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignKycProfile(command.getIdentityDocumentId());
+		projector.unAssignKycProfile(command.getChildId());
 	}
 	
 

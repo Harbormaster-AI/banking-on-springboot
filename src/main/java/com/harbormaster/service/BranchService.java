@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -250,7 +251,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getBranchId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -268,7 +269,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getBranchId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 
@@ -286,7 +287,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToAccounts(command.getBranchId(), command.getAddTo());
+		projector.addToAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -302,7 +303,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromAccounts(command.getBranchId(), command.getRemoveFrom());
+		projector.removeFromAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -319,7 +320,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToLoanAccounts(command.getBranchId(), command.getAddTo());
+		projector.addToLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -335,7 +336,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromLoanAccounts(command.getBranchId(), command.getRemoveFrom());
+		projector.removeFromLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -352,7 +353,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToAtms(command.getBranchId(), command.getAddTo());
+		projector.addToAtms(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -368,7 +369,7 @@ public class BranchService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromAtms(command.getBranchId(), command.getRemoveFrom());
+		projector.removeFromAtms(command.getParentId(), command.getChildIds());
 	}
 
 

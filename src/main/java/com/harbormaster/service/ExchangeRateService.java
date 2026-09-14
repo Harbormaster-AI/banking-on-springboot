@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -248,7 +249,7 @@ public class ExchangeRateService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getExchangeRateId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -266,7 +267,7 @@ public class ExchangeRateService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getExchangeRateId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 
@@ -284,7 +285,7 @@ public class ExchangeRateService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToFxTrades(command.getExchangeRateId(), command.getAddTo());
+		projector.addToFxTrades(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -300,7 +301,7 @@ public class ExchangeRateService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromFxTrades(command.getExchangeRateId(), command.getRemoveFrom());
+		projector.removeFromFxTrades(command.getParentId(), command.getChildIds());
 	}
 
 

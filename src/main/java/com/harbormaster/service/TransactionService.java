@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -258,7 +259,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignAccount(command.getTransactionId(), command.getAssignment());
+		projector.assignAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -276,7 +277,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignAccount(command.getTransactionId());
+		projector.unAssignAccount(command.getChildId());
 	}
 	
 	/**
@@ -292,7 +293,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignExternalCounterparty(command.getTransactionId(), command.getAssignment());
+		projector.assignExternalCounterparty(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -310,7 +311,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignExternalCounterparty(command.getTransactionId());
+		projector.unAssignExternalCounterparty(command.getChildId());
 	}
 	
 	/**
@@ -326,7 +327,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignPaymentCard(command.getTransactionId(), command.getAssignment());
+		projector.assignPaymentCard(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -344,7 +345,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignPaymentCard(command.getTransactionId());
+		projector.unAssignPaymentCard(command.getChildId());
 	}
 	
 	/**
@@ -360,7 +361,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignFundsTransfer(command.getTransactionId(), command.getAssignment());
+		projector.assignFundsTransfer(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -378,7 +379,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignFundsTransfer(command.getTransactionId());
+		projector.unAssignFundsTransfer(command.getChildId());
 	}
 	
 	/**
@@ -394,7 +395,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignFxTrade(command.getTransactionId(), command.getAssignment());
+		projector.assignFxTrade(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -412,7 +413,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignFxTrade(command.getTransactionId());
+		projector.unAssignFxTrade(command.getChildId());
 	}
 	
 	/**
@@ -428,7 +429,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignDispute(command.getTransactionId(), command.getAssignment());
+		projector.assignDispute(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -446,7 +447,7 @@ public class TransactionService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignDispute(command.getTransactionId());
+		projector.unAssignDispute(command.getChildId());
 	}
 	
 

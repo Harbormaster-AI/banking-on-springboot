@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -256,7 +257,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignCustomer(command.getFXTradeId(), command.getAssignment());
+		projector.assignCustomer(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -274,7 +275,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignCustomer(command.getFXTradeId());
+		projector.unAssignCustomer(command.getChildId());
 	}
 	
 	/**
@@ -290,7 +291,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getFXTradeId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -308,7 +309,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getFXTradeId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 	/**
@@ -324,7 +325,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignExchangeRate(command.getFXTradeId(), command.getAssignment());
+		projector.assignExchangeRate(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -342,7 +343,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignExchangeRate(command.getFXTradeId());
+		projector.unAssignExchangeRate(command.getChildId());
 	}
 	
 	/**
@@ -358,7 +359,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignSourceAccount(command.getFXTradeId(), command.getAssignment());
+		projector.assignSourceAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -376,7 +377,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignSourceAccount(command.getFXTradeId());
+		projector.unAssignSourceAccount(command.getChildId());
 	}
 	
 	/**
@@ -392,7 +393,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignDestinationAccount(command.getFXTradeId(), command.getAssignment());
+		projector.assignDestinationAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -410,7 +411,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignDestinationAccount(command.getFXTradeId());
+		projector.unAssignDestinationAccount(command.getChildId());
 	}
 	
 	/**
@@ -426,7 +427,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignTransaction(command.getFXTradeId(), command.getAssignment());
+		projector.assignTransaction(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -444,7 +445,7 @@ public class FXTradeService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignTransaction(command.getFXTradeId());
+		projector.unAssignTransaction(command.getChildId());
 	}
 	
 

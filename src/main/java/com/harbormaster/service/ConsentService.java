@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -248,7 +249,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignCustomer(command.getConsentId(), command.getAssignment());
+		projector.assignCustomer(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -266,7 +267,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignCustomer(command.getConsentId());
+		projector.unAssignCustomer(command.getChildId());
 	}
 	
 	/**
@@ -282,7 +283,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getConsentId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -300,7 +301,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getConsentId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 	/**
@@ -316,7 +317,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignThirdPartyProvider(command.getConsentId(), command.getAssignment());
+		projector.assignThirdPartyProvider(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -334,7 +335,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignThirdPartyProvider(command.getConsentId());
+		projector.unAssignThirdPartyProvider(command.getChildId());
 	}
 	
 
@@ -352,7 +353,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToAuthorizedAccounts(command.getConsentId(), command.getAddTo());
+		projector.addToAuthorizedAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -368,7 +369,7 @@ public class ConsentService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromAuthorizedAccounts(command.getConsentId(), command.getRemoveFrom());
+		projector.removeFromAuthorizedAccounts(command.getParentId(), command.getChildIds());
 	}
 
 

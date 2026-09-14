@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -257,7 +258,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignSourceAccount(command.getFundsTransferId(), command.getAssignment());
+		projector.assignSourceAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -275,7 +276,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignSourceAccount(command.getFundsTransferId());
+		projector.unAssignSourceAccount(command.getChildId());
 	}
 	
 	/**
@@ -291,7 +292,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignDestinationAccount(command.getFundsTransferId(), command.getAssignment());
+		projector.assignDestinationAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -309,7 +310,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignDestinationAccount(command.getFundsTransferId());
+		projector.unAssignDestinationAccount(command.getChildId());
 	}
 	
 	/**
@@ -325,7 +326,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignExternalBeneficiary(command.getFundsTransferId(), command.getAssignment());
+		projector.assignExternalBeneficiary(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -343,7 +344,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignExternalBeneficiary(command.getFundsTransferId());
+		projector.unAssignExternalBeneficiary(command.getChildId());
 	}
 	
 	/**
@@ -359,7 +360,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignInitiatedBy(command.getFundsTransferId(), command.getAssignment());
+		projector.assignInitiatedBy(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -377,7 +378,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignInitiatedBy(command.getFundsTransferId());
+		projector.unAssignInitiatedBy(command.getChildId());
 	}
 	
 
@@ -395,7 +396,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToTransactions(command.getFundsTransferId(), command.getAddTo());
+		projector.addToTransactions(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -411,7 +412,7 @@ public class FundsTransferService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromTransactions(command.getFundsTransferId(), command.getRemoveFrom());
+		projector.removeFromTransactions(command.getParentId(), command.getChildIds());
 	}
 
 

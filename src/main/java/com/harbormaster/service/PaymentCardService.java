@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -254,7 +255,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignBank(command.getPaymentCardId(), command.getAssignment());
+		projector.assignBank(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -272,7 +273,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignBank(command.getPaymentCardId());
+		projector.unAssignBank(command.getChildId());
 	}
 	
 	/**
@@ -288,7 +289,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignAccount(command.getPaymentCardId(), command.getAssignment());
+		projector.assignAccount(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -306,7 +307,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignAccount(command.getPaymentCardId());
+		projector.unAssignAccount(command.getChildId());
 	}
 	
 	/**
@@ -322,7 +323,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.assignCustomer(command.getPaymentCardId(), command.getAssignment());
+		projector.assignCustomer(command.getChildId(), command.getAssignment());
 
 	}
 
@@ -340,7 +341,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.unAssignCustomer(command.getPaymentCardId());
+		projector.unAssignCustomer(command.getChildId());
 	}
 	
 
@@ -358,7 +359,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToTransactions(command.getPaymentCardId(), command.getAddTo());
+		projector.addToTransactions(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -374,7 +375,7 @@ public class PaymentCardService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromTransactions(command.getPaymentCardId(), command.getRemoveFrom());
+		projector.removeFromTransactions(command.getParentId(), command.getChildIds());
 	}
 
 

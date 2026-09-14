@@ -21,6 +21,7 @@
  * Contributors :
  *       Turnstone National Bank - General Release
  */
+
 package com.harbormaster.service;
 
 import java.io.IOException;
@@ -257,7 +258,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToBranches(command.getBankId(), command.getAddTo());
+		projector.addToBranches(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -273,7 +274,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromBranches(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromBranches(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -290,7 +291,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToProducts(command.getBankId(), command.getAddTo());
+		projector.addToProducts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -306,7 +307,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromProducts(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromProducts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -323,7 +324,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToCustomers(command.getBankId(), command.getAddTo());
+		projector.addToCustomers(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -339,7 +340,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromCustomers(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromCustomers(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -356,7 +357,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToAccounts(command.getBankId(), command.getAddTo());
+		projector.addToAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -372,7 +373,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromAccounts(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -389,7 +390,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToPaymentCards(command.getBankId(), command.getAddTo());
+		projector.addToPaymentCards(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -405,7 +406,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromPaymentCards(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromPaymentCards(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -422,7 +423,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToLoanAccounts(command.getBankId(), command.getAddTo());
+		projector.addToLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -438,7 +439,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromLoanAccounts(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromLoanAccounts(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -455,7 +456,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToExchangeRates(command.getBankId(), command.getAddTo());
+		projector.addToExchangeRates(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -471,7 +472,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromExchangeRates(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromExchangeRates(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -488,7 +489,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToConsents(command.getBankId(), command.getAddTo());
+		projector.addToConsents(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -504,7 +505,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromConsents(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromConsents(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -521,7 +522,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.addToThirdPartyProviders(command.getBankId(), command.getAddTo());
+		projector.addToThirdPartyProviders(command.getParentId(), command.getChildIds());
 	}
 
 	/**
@@ -537,7 +538,7 @@ public class BankService
 		// --------------------------------------
 		// delegate to the projector
 		// --------------------------------------
-		projector.removeFromThirdPartyProviders(command.getBankId(), command.getRemoveFrom());
+		projector.removeFromThirdPartyProviders(command.getParentId(), command.getChildIds());
 	}
 
 
